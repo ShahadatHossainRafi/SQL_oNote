@@ -1,34 +1,87 @@
 SQL Basics
 ----------
 
-@- SQL stands for Structured Query Language.
-@- SQL is an ANSI (American National Standard Institute) standard.
-@- SQL is a standard language for accessing and manipulating databases.
-@- RDBMS stands for Relational Database Management System.
-@- In RDBMS datas are stored in tables.
-@- Tables are called objects in RDBMS.
-@- A database can contain one or more than one table.
-@- Tables are identified by uniqe names.
-@- Table rows are called records.
-@- Table columns are called fields.
-@- SQL is not case sensitive.
-@- Using semicolones at the end of each SQL statement is a good practice.
-@- 
+@- What is SQL?
+
+SQL is a standard language for accessing and manipulating databases.
+
+@- SQL stands for...
+
+Structured Query Language.
+
+@- SQL is an ___ standard
+
+ANSI (American National Standard Institute) standard.
+
+@- SQL is case sensitive?
+
+No. SQL is not case sensitive though SQL statements are written in uppercase letters.
+
+@- We need to use semicolons at the end of SQL statments?
+
+Using semicolones at the end of each SQL statement is a good practice.
+
+@- RDBMS stands for...
+
+Relational Database Management System.
+
+@- In RDBMS datas are stored in...
+
+Tables.
+
+@- Tables are called ___ in RDBMS.
+
+Objects.
+
+@- A database can contain how many tables?
+
+A database can contain one or more than one tables.
+
+@- Tables have names?
+
+Yes. Tables are identified by uniqe names.
+
+@- Table rows are called...
+
+Records.
+
+@- Table columns are called...
+
+Fields.
+
 
 
 SQL SELECT statement
 --------------------
 
-@- SQL SELECT statement is used to read data from a database.
+@- SELECT statement is used to... 
 
-@- SELECT <column_name>, <column_name>
+Read data from a database.
+
+@- SELECT syntax...
+
+SELECT <column_name>, <column_name>
 FROM <table_name>;
 
 @- To select everything from a table... 
    SELECT *
    FROM <table_name>;
 
-@- 
+
+
+SELECT DISTINCT
+---------------
+
+@- SELECT DISTINCT statement is used to...
+
+Get distinct (different) values.
+
+@- SELECT DISTINCT syntax...
+
+SELECT DISTINCT <column_name>, <column_name>
+FROM <table_name>;
+
+
 
 Links
 ----------
@@ -36,3 +89,7 @@ Links
 @- For taking quiz test - http://www.w3schools.com/sql/sql_quiz.asp 
 @- SQL quick ref - http://www.w3schools.com/sql/sql_quickref.asp
 @- SQL data types - www.w3schools.com/sql/sql_datatype
+
+
+
+To start from - http://www.w3schools.com/sql/sql_where.asp

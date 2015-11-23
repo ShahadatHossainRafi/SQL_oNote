@@ -3,51 +3,55 @@ SQL Basics
 
 @- What is SQL?
 
-SQL is a standard language for accessing and manipulating databases.
+   SQL is a standard language for accessing and manipulating databases.
 
 @- SQL stands for...
 
-Structured Query Language.
+   Structured Query Language.
 
 @- SQL is an ___ standard
 
-ANSI (American National Standard Institute) standard.
+   ANSI (American National Standard Institute) standard.
 
 @- SQL is case sensitive?
 
-No. SQL is not case sensitive though SQL statements are written in uppercase letters.
+   No. SQL is not case sensitive though SQL statements are written in uppercase letters.
 
 @- We need to use semicolons at the end of SQL statments?
 
-Using semicolones at the end of each SQL statement is a good practice.
+   Using semicolones at the end of each SQL statement is a good practice.
 
 @- RDBMS stands for...
 
-Relational Database Management System.
+   Relational Database Management System.
 
 @- In RDBMS datas are stored in...
 
-Tables.
+   Tables.
 
 @- Tables are called ___ in RDBMS.
 
-Objects.
+   Objects.
 
 @- A database can contain how many tables?
 
-A database can contain one or more than one tables.
+   A database can contain one or more than one tables.
 
 @- Tables have names?
 
-Yes. Tables are identified by uniqe names.
+   Yes. Tables are identified by uniqe names.
 
 @- Table rows are called...
 
-Records.
+   Records.
 
 @- Table columns are called...
 
-Fields.
+   Fields.
+
+@- After querry results are stored in...
+
+   Results are stored in a table called Result-set.
 
 
 
@@ -56,12 +60,12 @@ SELECT
 
 @- SELECT statement is used to... 
 
-Read data from a database.
+   Read data from a database.
 
 @- SELECT syntax...
 
-SELECT <column_name>, <column_name>
-FROM <table_name>;
+   SELECT <column_name>, <column_name>
+   FROM <table_name>;
 
 @- To select everything from a table... 
    SELECT *
@@ -74,12 +78,12 @@ SELECT DISTINCT
 
 @- SELECT DISTINCT statement is used to...
 
-Get distinct (different) values.
+   Get distinct (different) values.
 
 @- SELECT DISTINCT syntax...
 
-SELECT DISTINCT <column_name>, <column_name>
-FROM <table_name>;
+   SELECT DISTINCT <column_name>, <column_name>
+   FROM <table_name>;
 
 
 

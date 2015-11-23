@@ -51,7 +51,7 @@ SQL Basics
 
 @- After querry results are stored in...
 
-   Results are stored in a table called Result-set.
+   Results are stored in a table called result-set.
 
 
 
@@ -64,7 +64,7 @@ SELECT
 
 @- SELECT syntax...
 
-   SELECT <column_name>, <column_name>
+   SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>;
 
 @- To select everything from a table... 
@@ -82,8 +82,89 @@ SELECT DISTINCT
 
 @- SELECT DISTINCT syntax...
 
-   SELECT DISTINCT <column_name>, <column_name>
+   SELECT DISTINCT <column_name>
    FROM <table_name>;
+
+@- SELECT DISTINCT works with ___ columns.
+
+   With only one column
+
+
+
+WHERE Clause
+------------
+
+@- When do we use WHERE clause?
+
+   We use WHERE clause to extract data according to our given criterion.
+
+@- WHERE syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> [operator] [value];
+
+@- '=' is stands for
+
+   Equal to.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> = [value];
+
+@- '<>' is stands for...
+
+   Not equal.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> <> [value];
+
+@- '>' is stands for...
+
+   Greater than.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> > [value];
+
+@- '<' is stands for...
+
+   Smaller than.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> < [value];
+
+@- '>=' is stands for...
+
+   Greater than or equal to.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> >= [value];
+
+@- '<=' is stands for...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> <= [value];
+
+@- 'LIKE'
+
+@- 'BETWEEN'
+
+@- 'IN'
 
 
 
@@ -91,9 +172,18 @@ Links
 ----------
 
 @- For taking quiz test - http://www.w3schools.com/sql/sql_quiz.asp 
+
 @- SQL quick ref - http://www.w3schools.com/sql/sql_quickref.asp
+
 @- SQL data types - www.w3schools.com/sql/sql_datatype
 
 
 
-To start from - http://www.w3schools.com/sql/sql_where.asp
+To start from
+- http://www.w3schools.com/sql/sql_like.asp
+
+ToDO-
+- LIKE, IN, BETWEEN should be updated from WHERE clause section
+
+Questions-
+- SELECT DISTINCT only work with one column? If yes: pass if not: update SELECT DISTINCT block

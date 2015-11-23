@@ -15,11 +15,11 @@ SQL Basics
 
 @- SQL is case sensitive?
 
-   No. SQL is not case sensitive though SQL statements are written in uppercase letters.
+   No. SQL is not case sensitive though SQL statements are usually written in uppercase letters.
 
 @- We need to use semicolons at the end of SQL statments?
 
-   Using semicolones at the end of each SQL statement is a good practice.
+   Even though it is not mandetory for all databases but use of semicolones at the end of each SQL statement is always a good practice.
 
 @- RDBMS stands for...
 
@@ -52,6 +52,14 @@ SQL Basics
 @- After querry results are stored in...
 
    Results are stored in a table called result-set.
+
+@- What is wildcard?
+
+   SQL wildcard means "missing characters".
+
+@- SQL wildcard is...
+
+   %
 
 
 
@@ -104,57 +112,49 @@ WHERE Clause
    FROM <table_name>
    WHERE <column_name> [operator] [value];
 
-@- '=' is stands for
+@- Which operators we use with WHERE clause...
 
-   Equal to.
+   = (equal)
+   <> (not equal)
+   > (greater than)
+   >= (greater than or equal)
+   < (smaller than)
+   <= (smaller than or equal)
+   LIKE
+   BETWEEN
+   IN
 
-@- Syntax...
+@- '=' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
    WHERE <column_name> = [value];
 
-@- '<>' is stands for...
-
-   Not equal.
-
-@- Syntax...
+@- '<>' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
    WHERE <column_name> <> [value];
 
-@- '>' is stands for...
-
-   Greater than.
-
-@- Syntax...
+@- '>' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
    WHERE <column_name> > [value];
 
-@- '<' is stands for...
-
-   Smaller than.
-
-@- Syntax...
+@- '<' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
    WHERE <column_name> < [value];
 
-@- '>=' is stands for...
-
-   Greater than or equal to.
-
-@- Syntax...
+@- '>=' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
    WHERE <column_name> >= [value];
 
-@- '<=' is stands for...
+@- '<=' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
@@ -162,9 +162,35 @@ WHERE Clause
 
 @- 'LIKE'
 
+   SQL LIKE operator is used with WHERE clause to search for a specified patern in a column.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> LIKE [patern];
+
+@- 'NOT LIKE'
+
+   NOT LIKE operator is used to find something from a column which is not like the defined pattern.
+
+@- Syntax...
+
+   SELECT <column1>, <column2>, ...<columnN>
+   FROM <table_name>
+   WHERE <column_name> NOT LIKE [pattern];
+
 @- 'BETWEEN'
 
 @- 'IN'
+
+   IN operator is used to find multiple values from a table.
+
+@- Syntax...
+
+   SELECT <column1>,<column2>,....<columnN>
+   FROM <table_name>
+   WHERE <column_name> IN [value1, value2, valueN];
 
 
 
@@ -183,7 +209,7 @@ To start from
 - http://www.w3schools.com/sql/sql_like.asp
 
 ToDO-
-- LIKE, IN, BETWEEN should be updated from WHERE clause section
+- IN, BETWEEN should be updated from WHERE clause section
 
 Questions-
 - SELECT DISTINCT only work with one column? If yes: pass if not: update SELECT DISTINCT block

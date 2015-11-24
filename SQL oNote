@@ -194,6 +194,64 @@ WHERE Clause
 
 
 
+ALTER TABLE
+-----------
+
+@- Why do we use ALTER TABLE statement?
+
+   To add, drop or modify columns of an existing table.
+
+@- To add a single column within a table...
+
+   ALTER TABLE <table_name>
+   ADD COLUMN <column_name> <data_type>;
+
+@- To add multiple columns to a table...
+
+   ALTER TABLE <table_name>
+   ADD COLUMN <column_name1> <data_type>
+   ADD COLUMN <column_name2> <data_type>
+   ADD COLUMN <column_nameN> <data_type>;
+
+@- To delete a single column of a table...
+
+   ALTER TABlE <table_name>
+   DROP COLUMN <column_name>;
+
+@- To delete multiple columns of a table...
+
+   ALTER TABLE <table_name>
+   DROP COLUMN <column_name1>, <column_name2>,.....,<column_nameN>;
+
+@- Some databases don't allow ___ columns.
+
+   Some databases don't allow deleting columns.
+
+@- To change data type of a column - Oracle
+
+   ALTER TABLE <table_name>
+   MODIFY <column_name> <data_type>;
+
+@- To change data type of a column - MY Sql
+
+   ALTER TABLE <table_name>
+   MODIFY COLUMN <column_name> <data_type>;
+
+@- To change data type of a column - MS Excess/SQL server
+
+   ALTER TABLE <table_name>
+   ALTER COLUMN <column_name> <data_type>;
+
+@- Why we use TRUNCAT TABLE statement?
+
+   To delete all data of a table while preserving the original table structure.
+
+@- Syntax...
+
+   TRUNCATE TABLE <table_name>;
+
+
+
 Links
 ----------
 

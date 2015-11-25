@@ -99,8 +99,12 @@ SELECT DISTINCT
 
 
 
-WHERE Clause
-------------
+WHERE 
+-----
+
+@- WHERE is a ___
+
+   Clause
 
 @- When do we use WHERE clause?
 
@@ -191,6 +195,71 @@ WHERE Clause
    SELECT <column1>,<column2>,....<columnN>
    FROM <table_name>
    WHERE <column_name> IN [value1, value2, valueN];
+
+
+
+ORDER BY
+--------
+
+@- SQL ORDER BY is a ___
+
+   Clause
+
+@- ORDER BY clause is used to...
+
+   To sort the result set.
+
+@- Default sorting order is...
+
+   Ascending
+
+@- Syntax...
+
+   SELECT <column_name1>, <column_name2>,...,<column_nameN>
+   FROM <table_name>
+   ORDER BY <column_name1> [ASC/DESC], <column_name2> [ASC/DESC], <column_nameN> [ASC/DESC];
+
+@- Explain how multiple column sorting works? 
+
+   At first SQL engine sorts column1 according to its values than it looks for same value in column1. If it finds then it sorts the column2 depending for the same values of column1. And this process works for N number of columns.
+
+
+
+INSERT INTO
+-----------
+
+@- INSERT INTO statement is used to...
+
+   Insert records into table.
+
+@- Syntax one...
+
+   INSERT INTO <table_name>
+   VALUES (value1, value2, ... , <valueN>);
+
+@- Syntax...
+
+   INSERT INTO <table_name> (<column_name1>, <column_name2>, ... , <column_nameN>)
+   VALUE (value1, value2, ... , valueN);
+
+
+
+UPDATE
+------
+
+@- Why we use SQL UPDATE statement...
+
+   We use SQL UPDATE to update records of an existing table.
+
+@- Syntax...
+
+   UPDATE <table_name>
+   SET <column_name1> = <value1>, <column_name2> = <value2>, <column_nameN> = <valueN>;
+   WHERE <column_name> = <value>;
+
+@- Why do we need to use WHERE clause with UPDATE statement?
+
+   We need to use WHERE clause with UPDATE statement to identify which specific cell we are going to update. An Update statemtn without WHERE will actually update all the cells of field with new given value.
 
 
 

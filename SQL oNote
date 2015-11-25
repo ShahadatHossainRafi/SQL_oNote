@@ -61,6 +61,10 @@ SQL Basics
 
    %
 
+@- Statements
+@- Querries
+@- Clause
+
 
 
 SELECT
@@ -68,7 +72,7 @@ SELECT
 
 @- SELECT statement is used to... 
 
-   Read data from a database.
+   Get data from a table.
 
 @- SELECT syntax...
 
@@ -114,7 +118,7 @@ WHERE
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> [operator] [value];
+   WHERE <column_name> <operator> <value>;
 
 @- Which operators we use with WHERE clause...
 
@@ -132,37 +136,37 @@ WHERE
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> = [value];
+   WHERE <column_name> = <value>;
 
 @- '<>' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> <> [value];
+   WHERE <column_name> <> <value>;
 
 @- '>' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> > [value];
+   WHERE <column_name> > <value>;
 
 @- '<' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> < [value];
+   WHERE <column_name> < <value>;
 
 @- '>=' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> >= [value];
+   WHERE <column_name> >= <value>;
 
 @- '<=' syntax...
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> <= [value];
+   WHERE <column_name> <= <value>;
 
 @- 'LIKE'
 
@@ -172,7 +176,7 @@ WHERE
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> LIKE [patern];
+   WHERE <column_name> LIKE <patern>;
 
 @- 'NOT LIKE'
 
@@ -211,17 +215,17 @@ ORDER BY
 
 @- Default sorting order is...
 
-   Ascending
+   Ascending(ASC)
 
 @- Syntax...
 
    SELECT <column_name1>, <column_name2>,...,<column_nameN>
    FROM <table_name>
-   ORDER BY <column_name1> [ASC/DESC], <column_name2> [ASC/DESC], <column_nameN> [ASC/DESC];
+   ORDER BY <column_name1> <ASC/DESC>, <column_name2> <ASC/DESC>, <column_nameN> <ASC/DESC>;
 
-@- Explain how multiple column sorting works? 
+@- Explain how multiple columns sorting works? 
 
-   At first SQL engine sorts column1 according to its values than it looks for same value in column1. If it finds then it sorts the column2 depending for the same values of column1. And this process works for N number of columns.
+   At first SQL engine sorts column1 according to the given ascending order than it looks for same value in column 1. If it finds then it sorts the column 2 depending for the same values of column 1. And this process works for N number of columns.
 
 
 
@@ -232,12 +236,12 @@ INSERT INTO
 
    Insert records into table.
 
-@- Syntax one...
+@- Syntax 1 ...
 
    INSERT INTO <table_name>
    VALUES (value1, value2, ... , <valueN>);
 
-@- Syntax...
+@- Syntax 2 ...
 
    INSERT INTO <table_name> (<column_name1>, <column_name2>, ... , <column_nameN>)
    VALUE (value1, value2, ... , valueN);
@@ -249,7 +253,7 @@ UPDATE
 
 @- Why we use SQL UPDATE statement...
 
-   We use SQL UPDATE to update records of an existing table.
+   We use SQL UPDATE to update cells of an existing table.
 
 @- Syntax...
 

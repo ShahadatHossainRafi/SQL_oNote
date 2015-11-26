@@ -13,7 +13,7 @@
  	<column_nameN> <data_typeN> (size)
 );
 
-@- To get data from table...
+@- To get data from table
 
 SELECT <column_name1>, <column_name2>, ... , <column_nameN>
 FROM <table_name>;

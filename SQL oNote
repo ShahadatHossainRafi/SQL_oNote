@@ -59,11 +59,34 @@ SQL Basics
 
 @- SQL wildcard is...
 
-   %
+   %, _, [some_characters], [!some_characters]
 
 @- Statements
 @- Querries
 @- Clause
+@- CRUD
+
+
+
+CREATE DATABASE
+---------------
+
+@- Syntax...
+
+   CREATE DATABASE <database_name>;
+
+
+
+CREATE TABLE
+------------
+
+@- Syntax...
+
+   CREATE TABLE <table_name>(
+   	<column_name1> <data_type1> (size),
+   	<column_name2> <data_type2> (size),
+   	<column_nameN> <data_typeN> (size)
+);
 
 
 
@@ -103,10 +126,45 @@ SELECT DISTINCT
 
 
 
+SELECT TOP
+----------
+
+@- SELECT TOP is used to...
+
+   Return desired number of rows from a table.
+
+@- SELECT TOP is a ___
+
+   Clause.
+
+@- Syntax...
+
+   SELECT TOP number/percent <column_name1>, <column_name2>, ... , <column_nameN>
+   FROM <table_name>;
+
+@- Syntax using percent...
+
+   SELECT TOP 50 percent <column_name1>, <column_name2>, ... , <column_nameN>
+   FROM <table_name>;
+
+@- Syntax... MySQL
+
+   SELECT <column_name1>, <column_name2>, ... , <column_nameN>
+   FROM <table_name>
+   LIMIT <number>;
+
+@- Syntax... Oracle
+
+   SELECT <column_name1>, <column_name2>, ... , <column_nameN>
+   FROM <table_name>
+   WHERE ROWNUM <= <number>;
+
+
+
 WHERE 
 -----
 
-@- WHERE is a ___
+@- SQL WHERE is a ___
 
    Clause
 
@@ -132,41 +190,10 @@ WHERE
    BETWEEN
    IN
 
-@- '=' syntax...
 
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> = <value>;
 
-@- '<>' syntax...
-
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> <> <value>;
-
-@- '>' syntax...
-
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> > <value>;
-
-@- '<' syntax...
-
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> < <value>;
-
-@- '>=' syntax...
-
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> >= <value>;
-
-@- '<=' syntax...
-
-   SELECT <column1>, <column2>, ...<columnN>
-   FROM <table_name>
-   WHERE <column_name> <= <value>;
+LIKE
+----
 
 @- 'LIKE'
 
@@ -186,7 +213,7 @@ WHERE
 
    SELECT <column1>, <column2>, ...<columnN>
    FROM <table_name>
-   WHERE <column_name> NOT LIKE [pattern];
+   WHERE <column_name> NOT LIKE <pattern>;
 
 @- 'BETWEEN'
 
@@ -198,7 +225,37 @@ WHERE
 
    SELECT <column1>,<column2>,....<columnN>
    FROM <table_name>
-   WHERE <column_name> IN [value1, value2, valueN];
+   WHERE <column_name> IN <value1, value2, valueN>;
+
+
+
+DELETE
+------
+
+@- DELETE statment is used to...
+
+   Delete records from a table.
+
+@- Syntax...
+
+   DELETE FROM <table_name>
+   WHERE <some_column> = <some_value>;
+
+@- If we use DELETE statement without WHERE clause what will happen?
+
+   It will delete all the records from a table.
+
+@- If we delete all the records from a table use DELETE statement will rest other still remain?
+
+   Yes table structure, index, attributes etc. will still remain as before. Just the records will be truncated.
+
+@- Delete all records from a table...
+
+   DELETE FROM <table_name>;
+   
+   or
+
+   DELETE * FROM <table_name>;
 
 
 
@@ -225,7 +282,7 @@ ORDER BY
 
 @- Explain how multiple columns sorting works? 
 
-   At first SQL engine sorts column1 according to the given ascending order than it looks for same value in column 1. If it finds then it sorts the column 2 depending for the same values of column 1. And this process works for N number of columns.
+   At first SQL engine sorts column 1 according to the given ascending order than it looks for same value in column 1. If it finds then it sorts the column 2 depending for the same values of column 1. And this process works for N number of columns.
 
 
 
@@ -246,7 +303,11 @@ INSERT INTO
    INSERT INTO <table_name> (<column_name1>, <column_name2>, ... , <column_nameN>)
    VALUE (value1, value2, ... , valueN);
 
+@- Insert multiple records with one single querry...
 
+   INSERT INTO <table_name>
+   (<column_name1>, <column_name2, ... , <column_nameN>)
+   VALUES (value1, value2, ... , valueN), (value1, value2, ... , valueN), (value1, value2, ... , valueN)
 
 UPDATE
 ------
@@ -341,6 +402,9 @@ To start from
 
 ToDO-
 - IN, BETWEEN should be updated from WHERE clause section
+- UPDATE multiple columns with one single querry.
+- INSERT INTO multiple rows with one single querry.
+
 
 Questions-
 - SELECT DISTINCT only work with one column? If yes: pass if not: update SELECT DISTINCT block

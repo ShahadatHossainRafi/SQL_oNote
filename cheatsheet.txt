@@ -1,7 +1,19 @@
 #SQL Cheat Sheet
 
 
-@- To get data from table
+@- To create database...
+
+   CREATE DATABASE <database_name>;
+
+@- To create table...
+
+   CREATE TABLE <table_name>(
+   	<column_name1> <data_type1> (size),
+ 	<column_name2> <data_type2> (size),
+ 	<column_nameN> <data_typeN> (size)
+);
+
+@- To get data from table...
 
 SELECT <column_name1>, <column_name2>, ... , <column_nameN>
 FROM <table_name>;
@@ -9,9 +21,9 @@ FROM <table_name>;
 @- To get all data from a table
 
 SELECT *
-FROM <table_name>
+FROM <table_name>;
 
-@- To get different da
+@- To get different data from a column...
 
 SELECT DISTINCT <column_name>
 FROM <table_name>;
@@ -42,7 +54,7 @@ FROM <table_name>;
 
    SELECT <column_name1>, <column_name2>, ... , <column_nameN>
    FROM <table_name>
-   ORDER BY <column_name1> ASC|DESC, <column_name2> ASC|DESC, ... , <column_name> ASC|DESC;
+   ORDER BY <column_name1> ASC|DESC, <column_name2> ASC|DESC, ... , <column_nameN> ASC|DESC;
 
 @- To insert something into table...
 
@@ -60,7 +72,7 @@ FROM <table_name>;
    ALTER TABLE <table_name>
    ADD COLUMN <column_name1> <data_type>
    ADD COLUMN <column_name2> <data_type>
-   ADD COLUMN <column_nameN> <data_type>
+   ADD COLUMN <column_nameN> <data_type>;
 
 @- To drop columns of a table...
 
